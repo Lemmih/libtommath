@@ -1,14 +1,13 @@
-# libtommath
+# llvm-math
 
-This is the git repository for [LibTomMath](http://www.libtom.net/LibTomMath/), a free open source portable number theoretic multiple-precision integer (MPI) library written entirely in C.
+This git repository is forked from [LibTomMath](http://www.libtom.net/LibTomMath/), a free open source portable number theoretic multiple-precision integer (MPI) library written entirely in C.
 
-## Build Status
+## Changes from LibTomMath
 
-master: [![Build Status](https://api.travis-ci.org/libtom/libtommath.png?branch=master)](https://travis-ci.org/libtom/libtommath)
-
-develop: [![Build Status](https://api.travis-ci.org/libtom/libtommath.png?branch=develop)](https://travis-ci.org/libtom/libtommath)
-
-API/ABI changes: [check here](https://abi-laboratory.pro/tracker/timeline/libtommath/)
+ * Uses 64/32 bits per digit instead of 60/28.
+ * Uses clang builtins for efficiency (overflow detection, add-with-carry).
+ * Does no memory allocations. Memory management is entirely the responsibility
+   of the library user.
 
 ## Summary
 
